@@ -6,4 +6,5 @@ def bye():
   print("bye")
 
 
-hello()
+if __name__ == "__main__":
+    hello()
