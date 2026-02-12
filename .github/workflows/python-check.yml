@@ -20,7 +20,7 @@ jobs:
 
       # Step 3: Check out your code for Python linting
       - name: Run Flake8
-        run: TrueBrain/setup-python@v5
+        run: TrueBrain/actions-flake8@v2
 
       # Step 4: Run the script
       - name: Run addition script
