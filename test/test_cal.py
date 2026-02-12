@@ -12,3 +12,6 @@ def test_addition_negative():
 def test_addition_zero():
     # Test adding zero
     assert add(10, 0) == 10
+
+def test_force_fail():
+    assert 1==2
