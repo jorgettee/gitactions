@@ -19,8 +19,8 @@ jobs:
           python-version: '3.10'
 
       # Step 3: Check out your code for Python linting
-      - name: Run Flake8
-        run: TrueBrain/actions-flake8@v2
+      - name: Run Linter
+        uses: TrueBrain/actions-flake8@v2
 
       # Step 4: Run the script
       - name: Run addition script
