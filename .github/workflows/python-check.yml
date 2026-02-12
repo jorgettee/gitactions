@@ -11,7 +11,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 2: Set up the Python environment
+      # Step 2: Check out your code for Python linting
+      - name: Run Flake8
+        uses: TrueBrain/setup-python@v5
+
+      # Step 3: Set up the Python environment
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
