@@ -1,27 +1,23 @@
-name: Python Addition Check
+name: Python-Powered Automation
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   check-math:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out your code from GitHub
-      - name: Checkout code
+      - name: Get code
         uses: actions/checkout@v4
 
-      # Step 2: Set up the Python environment
-      - uses: actions/setup-python@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Install Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      # Step 3: Check out your code for Python linting
-      - name: Run Linter
-        uses: TrueBrain/actions-flake8@v2
+      - name: Install Tools
+        uses: pip install -r requirements.txt
 
       # Step 4: Run the script
-      - name: Run addition script
-        run: python calc.py
+      - name: Run Python Manager
+        run: python automate.py
